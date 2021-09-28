@@ -1,0 +1,765 @@
+@font-face {
+  font-family: 'Vidaloka', serif;
+  src: url("https://fonts.googleapis.com/css2?family=Vidaloka&display=swap");
+}
+
+@font-face {
+  font-family: 'Nunito', serif;
+  src: url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,800;1,200;1,300;1,400;1,600&display=swap");
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  color: #18957D;
+  font-family: 'Nunito';
+  font-size: 16px;
+}
+
+body h1 {
+  font-family: 'Vidaloka', serif;
+  font-weight: 500;
+  font-size: 48px;
+  margin: 0;
+}
+
+body h2 {
+  font-family: 'Vidaloka', serif;
+  font-weight: 500;
+  margin: 0;
+}
+
+body h3 {
+  font-weight: 200;
+  font-size: 16px;
+  margin: 0;
+}
+
+::-moz-selection {
+  color: white;
+  background-color: #Fabe74;
+}
+
+::selection {
+  color: white;
+  background-color: #Fabe74;
+}
+
+a {
+  text-decoration: none;
+  color: #18957D;
+}
+
+li {
+  list-style: none;
+}
+
+.button {
+  background: #18957D;
+  border: none;
+  border-radius: 5px;
+  padding: 0.6rem 0.8rem;
+  display: inline-block;
+}
+
+.button a {
+  color: white;
+}
+
+.button:hover {
+  -webkit-box-shadow: 0px 1px 2px #06382e71;
+          box-shadow: 0px 1px 2px #06382e71;
+  background: linear-gradient(60deg, #18957D, #97FCC4);
+}
+
+/*SPAN*/
+.mots_hover {
+  background-image: linear-gradient(60deg, #17947C, #96fbc4);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.mots_hover:hover {
+  background-image: linear-gradient(60deg, #96fbc4, #96fbc4, #F9F1E5, #Fabe74, #F9F1E5, #96fbc4);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.smiley:hover {
+  color: #Fabe74;
+}
+
+/*HEADER*/
+header {
+  /*GENERAL*/
+  /*ACCEUIL*/
+  /*PAGE PROJET*/
+  /* PAGE CONTACT*/
+}
+
+header nav {
+  position: fixed;
+  width: 100%;
+  height: 55px;
+  padding: .5rem .5rem;
+  background-color: rgba(255, 255, 255, 0.61);
+  -webkit-backdrop-filter: blur(15px);
+          backdrop-filter: blur(15px);
+  z-index: 10;
+  border-bottom: solid 1px white;
+}
+
+header nav .logo a {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+header nav .logo a img {
+  width: 45px;
+  margin: 0 20px 20px 20px;
+  -webkit-filter: drop-shadow(0px 2px 1px #1e2b28ab);
+          filter: drop-shadow(0px 2px 1px #1e2b28ab);
+}
+
+header nav .logo a p {
+  font-family: 'Vidaloka', sans-serif;
+  font-size: 25px;
+}
+
+header nav .logo a:hover {
+  color: #Fabe74;
+}
+
+header nav .nav_centre {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+header nav .nav_centre ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding: 0;
+}
+
+header nav .nav_centre ul li {
+  padding: 5px 40px;
+}
+
+header nav .nav_centre ul a:hover {
+  color: #Fabe74;
+}
+
+header .dev_par {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+  margin-left: 88vw;
+  margin-top: 45vh;
+  position: fixed;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  padding: 0;
+  z-index: 15;
+}
+
+header .dev_par img {
+  width: 30px;
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+  padding-top: 1rem;
+}
+
+header .background {
+  position: fixed;
+  margin-top: 5rem;
+  z-index: -1;
+  opacity: 0.4;
+}
+
+header .background img {
+  height: 100vh;
+}
+
+header .background_bis {
+  position: absolute;
+  opacity: 0.4;
+  z-index: -3;
+}
+
+header .hero {
+  padding: 15vw 10vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+header .hero .texte {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+header .hero .animation {
+  width: 50vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+header .hero .animation img {
+  width: 300px;
+  height: 100%;
+}
+
+header .nav_projets {
+  padding: 0vw 10vw 10vw 10vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: end;
+}
+
+header .nav_projets .web, header .nav_projets .obj, header .nav_projets .autre {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  width: 10rem;
+  height: 10rem;
+  border-radius: 5rem;
+}
+
+header .nav_projets .web {
+  color: white;
+  background: #18957D;
+  height: 25rem;
+  border-radius: 0 0 5rem 5rem;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+  padding-bottom: 4rem;
+}
+
+header .nav_projets .web h2 {
+  padding-bottom: 5rem;
+}
+
+header .nav_projets .web:hover {
+  -webkit-transition: 8s;
+  transition: 8s;
+  background: -webkit-gradient(linear, left top, left bottom, from(#18957D), to(#97FCC4));
+  background: linear-gradient(#18957D, #97FCC4);
+}
+
+header .nav_projets .obj {
+  border: solid 3px;
+  border-color: #97FCC4;
+  /*border-image: linear-gradient(#18957D, #97FCC4)1;*/
+}
+
+header .nav_projets .obj:hover {
+  -webkit-transition: 8s;
+  transition: 8s;
+  background: -webkit-gradient(linear, left top, left bottom, from(#97FCC4), to(#F9F1E5));
+  background: linear-gradient(#97FCC4, #F9F1E5);
+}
+
+header .nav_projets .autre {
+  border: solid 3px;
+  border-color: #FABF74;
+}
+
+header .nav_projets .autre:hover {
+  -webkit-transition: 8s;
+  transition: 8s;
+  background: -webkit-gradient(linear, left top, left bottom, from(#F9F1E5), to(#FABF74));
+  background: linear-gradient(#F9F1E5, #FABF74);
+}
+
+header .hero_projet_type {
+  height: 4 0vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+  margin-left: 15vw;
+}
+
+header .hero_contact {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-top: 5rem;
+}
+
+header .titre_contact {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+header .titre_contact .txt_ligth {
+  font-weight: 200;
+}
+
+main {
+  margin: 0 5em;
+  /* TITRES GENERAL DES GRILLES PROJETS */
+  /*GRID & CARD*/
+  /* PAGE ACCEUIL > A PROPOS*/
+  /* PAGE PROJET TYPE*/
+  /*PAGE CONTACT*/
+}
+
+main .projets {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+main .projets .titre_projets {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+main .projets .titre_projets h2 {
+  font-family: 'Vidaloka';
+  margin: 0;
+}
+
+main .projets .titre_projets p {
+  color: #Fabe74;
+  font-weight: 200;
+  font-size: 16px;
+  margin: 0;
+}
+
+main .projets .web_pojet {
+  margin-top: 5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+main .projets .web_pojet p {
+  color: #17947C;
+  font-weight: 400;
+  font-size: 16px;
+  margin: 0;
+}
+
+main .grille {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 15rem 15rem 15rem;
+      grid-template-columns: 15rem 15rem 15rem;
+  gap: 2rem;
+  padding-bottom: 2rem;
+}
+
+@-webkit-keyframes filter-animation {
+  0% {
+    -webkit-filter: sepia(1) blur(0.5px);
+            filter: sepia(1) blur(0.5px);
+  }
+  50% {
+    -webkit-filter: sepia(0.6);
+            filter: sepia(0.6);
+  }
+  100% {
+    -webkit-filter: sepia(1) blur(0.5px);
+            filter: sepia(1) blur(0.5px);
+  }
+}
+
+@keyframes filter-animation {
+  0% {
+    -webkit-filter: sepia(1) blur(0.5px);
+            filter: sepia(1) blur(0.5px);
+  }
+  50% {
+    -webkit-filter: sepia(0.6);
+            filter: sepia(0.6);
+  }
+  100% {
+    -webkit-filter: sepia(1) blur(0.5px);
+            filter: sepia(1) blur(0.5px);
+  }
+}
+
+main .cartes .image, main .cartes_gde .image, main .cartes_moyenne .image {
+  border-radius: 5px;
+  overflow: hidden;
+  height: 15rem;
+  -webkit-animation: filter-animation 4s infinite;
+          animation: filter-animation 4s infinite;
+}
+
+main .cartes .image:hover, main .cartes_gde .image:hover, main .cartes_moyenne .image:hover {
+  -webkit-animation: none;
+          animation: none;
+}
+
+main .cartes img, main .cartes_gde img, main .cartes_moyenne img {
+  width: 100%;
+}
+
+main .cartes:hover, main .cartes_gde:hover, main .cartes_moyenne:hover {
+  -webkit-transition: 1.5s;
+  transition: 1.5s;
+  -webkit-filter: sepia(0%);
+          filter: sepia(0%);
+}
+
+main .txt_cartes {
+  display: none;
+  border-top: solid 1px;
+  border-bottom: solid 1px;
+  border-color: #97FCC4;
+  margin: 0.5rem;
+  padding: 0.5rem;
+}
+
+main .txt_cartes p {
+  margin: 0;
+  padding: 0;
+  text-align: left;
+  font-size: 14px;
+}
+
+main .cartes img {
+  height: 15rem;
+}
+
+main .cartes_moyenne {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-column: 1/3;
+}
+
+main .cartes_gde {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-column: 1/4;
+}
+
+main .image:hover .txt_cartes {
+  color: red;
+}
+
+main .apropos {
+  margin: 10rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+main .apropos .texte {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+main .apropos .animation {
+  width: 40vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+main .apropos .animation img {
+  width: 300px;
+  height: 100%;
+}
+
+main .page_projet_type .texte {
+  text-align: left;
+}
+
+main .web_portfolio {
+  padding-top: 10rem;
+}
+
+main .web_portfolio .txt {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+main .contact {
+  margin: 5rem;
+}
+
+main .contact .tel {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-family: 'vidaloka';
+  font-size: 48px;
+  background-color: #F9F1E5;
+  border-radius: 5px;
+}
+
+main .contact .formulaire {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 5rem;
+  background-color: #F9F1E5;
+  border-radius: 5px;
+}
+
+main .contact .formulaire label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 1rem;
+}
+
+main .contact .formulaire input, main .contact .formulaire textarea {
+  padding: 1rem;
+  border: none;
+  border-radius: 5px;
+  width: 25vw;
+}
+
+main .contact .formulaire textarea {
+  height: 25vh;
+}
+
+main .contact .formulaire .button {
+  margin: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+main .contact .formulaire button {
+  background-color: transparent;
+  border: transparent;
+  color: white;
+}
+
+footer {
+  height: 10vw;
+  background: linear-gradient(60deg, #17947C, #96fbc4);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 2rem;
+  /* img{
+        position: absolute;
+        z-index: -1;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+    } */
+}
+
+footer p {
+  color: white;
+  font-size: 14px;
+  margin: 0;
+}
+
+@media all and (max-width: 992px) {
+  header .hero {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  header .hero .texte h1 {
+    text-align: center;
+  }
+  header .hero .animation {
+    margin: 1rem;
+    width: 50vw;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  header .hero .animation img {
+    width: 200px;
+    height: 100%;
+  }
+  main {
+    margin: 3rem;
+  }
+  main .grille {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    padding-bottom: 1rem;
+  }
+  main .cartes_gde, main .cartes_moyenne {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-column: 1/3;
+  }
+  main .cartes img {
+    height: 15rem;
+  }
+  main .apropos {
+    margin: 10rem 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  main .apropos h1 {
+    margin-top: 1rem;
+    text-align: center;
+  }
+  main .apropos .animation {
+    width: 40vw;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  main .apropos .animation img {
+    width: 300px;
+    height: 100%;
+  }
+}
+/*# sourceMappingURL=style.css.map */
