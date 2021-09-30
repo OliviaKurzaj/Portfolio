@@ -109,6 +109,11 @@ header nav {
           backdrop-filter: blur(15px);
   z-index: 10;
   border-bottom: solid 1px white;
+  /*MENU BURGER*/
+}
+
+header nav .toggle {
+  display: none;
 }
 
 header nav .logo a {
@@ -683,6 +688,70 @@ footer p {
 }
 
 @media all and (max-width: 992px) {
+  header {
+    /*MENU BURGER*/
+  }
+  header nav .toggle {
+    display: block;
+    position: absolute;
+    top: 2rem;
+    right: 3rem;
+    font-size: 1.75rem;
+    color: #96fbc4;
+    cursor: pointer;
+    z-index: 20;
+  }
+  header nav .menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  header nav .ouvrir {
+    display: block;
+  }
+  header nav .fermer {
+    display: none;
+  }
+  header nav .open .ouvrir {
+    display: none;
+  }
+  header nav .open .fermer {
+    display: block;
+  }
+  header nav .menu {
+    width: 100%;
+    height: 100vh;
+    background: #00937C;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    list-style: none;
+    /*transform: translateX(-100%);*/
+    opacity: 0;
+    -webkit-transition: all .5s;
+    transition: all .5s;
+  }
+  header nav .open .menu {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  header nav .menu li a {
+    color: #fff;
+    text-decoration: none;
+    letter-spacing: .2rem;
+    font-size: 1.5rem;
+  }
   header .hero {
     display: -webkit-box;
     display: -ms-flexbox;
