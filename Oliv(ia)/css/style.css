@@ -374,12 +374,13 @@ header .titre_contact .txt_ligth {
 }
 
 main {
-  margin: 0 5em;
+  margin: 3rem 15rem;
   /* TITRES GENERAL DES GRILLES PROJETS */
-  /*HOVER TEXTE*/
   /*GRID & CARD*/
+  /*HOVER TEXTE*/
   /* PAGE ACCEUIL > A PROPOS*/
   /* PAGE PROJET TYPE*/
+  /* PAGE PROJET*/
   /*PAGE CONTACT*/
 }
 
@@ -482,6 +483,9 @@ main .grille {
 main .cartes, main .cartes_gde, main .cartes_moyenne {
   position: relative;
   display: block;
+  padding: 10px;
+  -webkit-box-shadow: 5px 5px 5px 5px #cec7bd;
+          box-shadow: 5px 5px 5px 5px #cec7bd;
 }
 
 main .cartes .image, main .cartes_gde .image, main .cartes_moyenne .image {
@@ -497,10 +501,6 @@ main .cartes .image:hover, main .cartes_gde .image:hover, main .cartes_moyenne .
           animation: none;
 }
 
-main .cartes img, main .cartes_gde img, main .cartes_moyenne img {
-  width: 100%;
-}
-
 main .cartes:hover, main .cartes_gde:hover, main .cartes_moyenne:hover {
   -webkit-transition: 1.5s;
   transition: 1.5s;
@@ -508,45 +508,8 @@ main .cartes:hover, main .cartes_gde:hover, main .cartes_moyenne:hover {
           filter: sepia(0%);
 }
 
-main .txt_cartes {
-  overflow: hidden;
-  position: absolute;
-  border-bottom: solid 1px;
-  border-radius: 5px 5px 0 0;
-  -webkit-backdrop-filter: blur(15px);
-          backdrop-filter: blur(15px);
-  border-color: #97FCC4;
-  background: rgba(255, 255, 255, 0.61);
-  margin: 0.5rem;
-  padding: 0.5rem;
-  -webkit-transform: translateY(-30px);
-          transform: translateY(-30px);
-  -webkit-transition: all 200ms ease-out;
-  transition: all 200ms ease-out;
-  opacity: 0;
-}
-
-main .txt_cartes p {
-  margin: 0;
-  padding: 0;
-  text-align: left;
-  font-size: 16px;
-}
-
-main .cartes_gde:hover .txt_cartes {
-  opacity: 1;
-  -webkit-transform: translateY(-46px);
-          transform: translateY(-46px);
-}
-
-main .cartes:hover .txt_cartes {
-  opacity: 1;
-  -webkit-transform: translateY(-90px);
-          transform: translateY(-90px);
-}
-
 main .cartes img {
-  height: 15rem;
+  height: 20rem;
 }
 
 main .cartes_moyenne {
@@ -559,6 +522,57 @@ main .cartes_gde {
   -ms-grid-column: 1;
   -ms-grid-column-span: 3;
   grid-column: 1/4;
+}
+
+main .txt_cartes {
+  position: absolute;
+  background-color: white;
+  border-radius: 0 0 5px 5px;
+  padding: 0.5rem;
+  -webkit-transform: translate(-8px, -250px);
+          transform: translate(-8px, -250px);
+  -webkit-transition: 400ms;
+  transition: 400ms;
+}
+
+main .txt_cartes p {
+  height: 0;
+  width: 0;
+  -webkit-transition: width 2s, height 2s;
+  transition: width 2s, height 2s;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+  font-size: 16px;
+  -webkit-transition: 400ms;
+  transition: 400ms;
+}
+
+main .cartes_gde:hover p {
+  width: auto;
+  height: auto;
+}
+
+main .cartes_gde:hover h2 {
+  color: #Fabe74;
+}
+
+main .cartes_gde:hover .txt_cartes {
+  background: white;
+}
+
+main .cartes:hover p {
+  width: auto;
+  height: auto;
+}
+
+main .cartes:hover h2 {
+  color: #Fabe74;
+}
+
+main .cartes:hover .txt_cartes {
+  background: white;
 }
 
 main .apropos {
@@ -604,7 +618,7 @@ main .page_projet_type .texte {
 }
 
 main .web_portfolio {
-  padding-top: 10rem;
+  padding-top: 5rem;
 }
 
 main .web_portfolio .txt {
@@ -618,6 +632,19 @@ main .web_portfolio .txt {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+main .web_portfolio .content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 main .contact {
@@ -807,20 +834,20 @@ footer p {
     height: 100%;
   }
   main {
-    margin: 3rem;
+    margin: 5rem;
   }
   main .grille {
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: 1fr 1fr;
-        grid-template-columns: 1fr 1fr;
+    -ms-grid-columns: 15rem 15rem;
+        grid-template-columns: 15rem 15rem;
     gap: 1rem;
     padding-bottom: 1rem;
   }
   main .cartes_gde, main .cartes_moyenne {
     -ms-grid-column: 1;
-    -ms-grid-column-span: 2;
-    grid-column: 1/3;
+    -ms-grid-column-span: 1;
+    grid-column: 1/2;
   }
   main .cartes img {
     height: 15rem;
