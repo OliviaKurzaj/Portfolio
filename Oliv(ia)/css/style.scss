@@ -9,6 +9,8 @@
 
 
 body{
+    background-image: url("img/canevas.png");
+    background-repeat: repeat;
     margin: 0;
     padding: 0;
     color: #18957D;
@@ -310,9 +312,12 @@ main{
         }
     }
 
+/*HOVER TEXTE*/
+
+
 /*GRID & CARD*/
 
-    .grille{
+.grille{
         display: grid;
         grid-template-columns: 15rem 15rem 15rem;
         gap: 2rem;
@@ -331,6 +336,8 @@ main{
         }
     }
     .cartes, .cartes_gde, .cartes_moyenne{   
+        position: relative;
+        display: block;
         .image{
             border-radius: 5px;
             overflow: hidden;
@@ -350,19 +357,33 @@ main{
     }
     
     .txt_cartes{
-            display: none;
-            border-top: solid 1px;
+        overflow: hidden;
+            position:absolute;
             border-bottom: solid 1px;
-            border-color: #97FCC4;
+            border-radius: 5px 5px 0 0;
+            background: rgba(255, 255, 255);
             margin: 0.5rem;
             padding: 0.5rem;
+            transform: translateY(-50px);
+            transition: all 200ms ease-out;
+            opacity: 0;
             p{
                 margin: 0;
                 padding: 0;
                 text-align: left;
-                font-size: 14px;
+                font-size: 16px;
             }
-    }     
+    } 
+    
+    .cartes_gde:hover .txt_cartes{
+        opacity: 1;
+        transform: translateY(-46px);
+    }
+
+    .cartes:hover .txt_cartes{
+        opacity: 1;
+        transform: translateY(-90px);
+    }
 
     .cartes{
         img{
@@ -374,9 +395,6 @@ main{
     }
     .cartes_gde{
         grid-column: 1/4;
-    }
-    .image:hover .txt_cartes{
-            color: red;
     }
 
     /* PAGE ACCEUIL > A PROPOS*/

@@ -9,6 +9,8 @@
 }
 
 body {
+  background-image: url("img/canevas.png");
+  background-repeat: repeat;
   margin: 0;
   padding: 0;
   color: #18957D;
@@ -374,6 +376,7 @@ header .titre_contact .txt_ligth {
 main {
   margin: 0 5em;
   /* TITRES GENERAL DES GRILLES PROJETS */
+  /*HOVER TEXTE*/
   /*GRID & CARD*/
   /* PAGE ACCEUIL > A PROPOS*/
   /* PAGE PROJET TYPE*/
@@ -476,6 +479,11 @@ main .grille {
   }
 }
 
+main .cartes, main .cartes_gde, main .cartes_moyenne {
+  position: relative;
+  display: block;
+}
+
 main .cartes .image, main .cartes_gde .image, main .cartes_moyenne .image {
   border-radius: 5px;
   overflow: hidden;
@@ -501,19 +509,40 @@ main .cartes:hover, main .cartes_gde:hover, main .cartes_moyenne:hover {
 }
 
 main .txt_cartes {
-  display: none;
-  border-top: solid 1px;
+  overflow: hidden;
+  position: absolute;
   border-bottom: solid 1px;
+  border-radius: 5px 5px 0 0;
+  -webkit-backdrop-filter: blur(15px);
+          backdrop-filter: blur(15px);
   border-color: #97FCC4;
+  background: rgba(255, 255, 255, 0.61);
   margin: 0.5rem;
   padding: 0.5rem;
+  -webkit-transform: translateY(-30px);
+          transform: translateY(-30px);
+  -webkit-transition: all 200ms ease-out;
+  transition: all 200ms ease-out;
+  opacity: 0;
 }
 
 main .txt_cartes p {
   margin: 0;
   padding: 0;
   text-align: left;
-  font-size: 14px;
+  font-size: 16px;
+}
+
+main .cartes_gde:hover .txt_cartes {
+  opacity: 1;
+  -webkit-transform: translateY(-46px);
+          transform: translateY(-46px);
+}
+
+main .cartes:hover .txt_cartes {
+  opacity: 1;
+  -webkit-transform: translateY(-90px);
+          transform: translateY(-90px);
 }
 
 main .cartes img {
@@ -530,10 +559,6 @@ main .cartes_gde {
   -ms-grid-column: 1;
   -ms-grid-column-span: 3;
   grid-column: 1/4;
-}
-
-main .image:hover .txt_cartes {
-  color: red;
 }
 
 main .apropos {
