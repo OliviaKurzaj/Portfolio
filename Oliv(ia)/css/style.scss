@@ -9,8 +9,7 @@
 
 
 body{
-    background-image: url("img/canevas.png");
-    background-repeat: repeat;
+    background: no-repeat center/80% url("img/back.png");
     margin: 0;
     padding: 0;
     color: #18957D;
@@ -198,6 +197,37 @@ header{
     }
 
 /*PAGE PROJET*/
+@keyframes glissement {
+    0% {
+        
+        transform: translateY(-1200px);
+    }
+    70% {
+        transform: translateY(0px);
+    }
+    80% {
+        transform: translateY(-20px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+@keyframes glissementD {
+    0% {
+        
+        transform: translateX(-1200px);
+    }
+    70% {
+        transform: translateX(0px);
+    }
+    80% {
+        transform: translateX(-20px);
+    }
+    100% {
+        transform: translateX(0px);
+    }
+}
 
     .nav_projets{
         padding: 0vw 10vw 10vw 10vw;
@@ -212,6 +242,7 @@ header{
             width: 10rem;
             height: 10rem;
             border-radius: 5rem;
+            
         }
         .web{
             color: white;
@@ -220,8 +251,10 @@ header{
             border-radius: 0 0 5rem 5rem;
             justify-content: end;
             padding-bottom: 4rem;
+            animation:  2s ease-out glissement ;
             h2{
                 padding-bottom: 5rem;
+                animation:  2s ease-out 50ms glissement ;
             }
             &:hover{
                 transition: 8s;
@@ -231,10 +264,10 @@ header{
         .obj{
             border: solid 3px;
             border-color: #97FCC4;
-            /*border-image: linear-gradient(#18957D, #97FCC4)1;*/
+            animation:  2s ease-out glissementD;
             &:hover{
                 transition: 8s;
-                background: linear-gradient(#97FCC4, #F9F1E5);
+                background-color: #97FCC4;
             }
         }
         .autre{
@@ -245,14 +278,6 @@ header{
                 background: linear-gradient( #F9F1E5,#FABF74);
             }
         }
-    }
-
-    .hero_projet_type{
-        height: 4 0vh;
-        display: flex;
-        flex-direction: column;
-        justify-content: end;
-        margin-left: 15vw;
     }
 
 /* PAGE CONTACT*/
@@ -272,8 +297,9 @@ header{
     }
 }
 
+/*MAIN*/
 main{
-    margin: 3rem 15rem;
+    margin: 0rem 15rem;
 
 /* TITRES GENERAL DES GRILLES PROJETS */
 
@@ -312,9 +338,6 @@ main{
         }
     }
 
-
-
-
 /*GRID & CARD*/
 
 .grille{
@@ -323,7 +346,6 @@ main{
         gap: 2rem;
         padding-bottom: 2rem;
     }
-    
     @keyframes filter-animation{
         0% {
     filter: sepia(1) blur(0.5px)/*hue-rotate(100deg)*/;
@@ -336,8 +358,6 @@ main{
             filter: sepia(1) blur(0.5px)/*hue-rotate(100deg)*/;
         }
     }
-
-    
     .cartes, .cartes_gde, .cartes_moyenne{ 
         position: relative;
         display: block;
@@ -347,13 +367,11 @@ main{
             border-radius: 5px;
             overflow: hidden;
             height: 15rem;
-            animation: filter-animation 4s infinite;
+            animation: filter-animation 3s infinite;
             &:hover{
                 animation: none;
             }
-            
         }
-            
             &:hover{
                 transition: 1.5s;
                 filter: sepia(0%);
@@ -371,41 +389,35 @@ main{
         grid-column: 1/4;
     }
     /*HOVER TEXTE*/
-
     .txt_cartes{
             position:absolute;
             background-color: white;
             border-radius:0 0 5px 5px ;
             padding: 0.5rem;
             transform: translate(-8px,-250px);
-            transition:400ms;
-            
             p{
                 height: 0;
                 width: 0;
-                transition: width 2s, height 2s;
                 overflow: hidden;
                 margin: 0;
                 padding: 0;
                 text-align: left;
                 font-size: 16px;
-                transition: 400ms;
+                transition:800ms;
             }
     } 
-
     .cartes_gde:hover p{
         width: auto;
         height: auto;
+        transition:800ms;
     }
     .cartes_gde:hover h2{
         color: #Fabe74;
     }
     .cartes_gde:hover .txt_cartes{
-        
         background: white;
+        transition:800ms;
     }
-
-
     .cartes:hover p{
         width: auto;
         height: auto;
@@ -416,8 +428,6 @@ main{
     .cartes:hover .txt_cartes{
         background: white;
     }
-
-
 
     /* PAGE ACCEUIL > A PROPOS*/
 
@@ -442,32 +452,43 @@ main{
     }
 
     /* PAGE PROJET TYPE*/
-
-    .page_projet_type{
-        .texte{
-            text-align: left;
+    .content_projet{
+        display: flex;
+        justify-content: space-around;
+        padding-top: 10rem;
+        .titre_projets{
+            animation:  2s ease-out glissement ;
+        }
+        .explications{
+            padding-left: 1rem;
+            border-left: solid 1px #97FCC4;
+        }
+    }
+    .grille_projet_type{
+        .cartes, .cartes_gde, .cartes_moyenne{ 
+            .image{
+                animation: none;
+            }
         }
     }
 
     /* PAGE PROJET*/
-    .web_portfolio{
-        padding-top: 5rem;
-        
-        .txt{
+    .content{
         display: flex;
-        flex-direction: column;
-        justify-content: center;
-
-        }
-        .content{
-        display: flex;
-        flex-direction: column;
         align-items: center;
+        background-color: red;
+        .web_portfolio{
+        padding-top: 0rem;
+        display: flex;
+            flex-direction: column;
+            justify-content: start;
+            align-items: flex-start;
+            background-color: red;
         }
     }
 
-    /*PAGE CONTACT*/
 
+    /*PAGE CONTACT*/
     .contact{
         margin: 5rem;
         .tel{
@@ -522,15 +543,7 @@ footer{
     {color: white;
     font-size: 14px;
     margin: 0;
-}
-
-    /* img{
-        position: absolute;
-        z-index: -1;
-        width: 100%;
-        padding: 0;
-        margin: 0;
-    } */
+    }
 }
 
 @media all and(max-width: 992px){ 
@@ -660,3 +673,4 @@ footer{
     }
     }
 }    
+
