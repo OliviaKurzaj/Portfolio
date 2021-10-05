@@ -6,10 +6,7 @@
     font-family: 'Nunito', serif;
     src: url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,800;1,200;1,300;1,400;1,600&display=swap');
 }
-
-
 body{
-    background: no-repeat center/80% url("img/back.png");
     margin: 0;
     padding: 0;
     color: #18957D;
@@ -33,37 +30,43 @@ body{
     }
     
 }
-
 ::selection {
     color: white;
-    background-color: #Fabe74;
+    background-color: #fabe7498;
 }
-
 a{
     text-decoration: none;
     color: #18957D;
 }
-
 li{
     list-style: none;
 }
-
 .button{
     background: #18957D;    
     border: none;
     border-radius: 5px;
     padding:0.6rem 0.8rem;
     display: inline-block;
+    animation:  2s ease-out glissementD;
         a{
             color: white;
     }
     &:hover{
-        box-shadow: 0px 1px 2px #06382e71;
+        box-shadow: 0px 2px 5px #06382e71;
         background: linear-gradient(60deg, #18957D, #97FCC4);
+        transform: scale(1.01);
+        transition: 200ms;
+        .smiley{
+            font-weight: 800;
+        }
     }
-
+    &:active{
+        box-shadow:inset 1px 1px #06382e71;
+        background: linear-gradient(60deg, #18957D, #97FCC4);
+        transform: scale(1);
+        transition: 400ms;
+    }
 }
-
 /*SPAN*/
 .mots_hover{
     background-image: linear-gradient(60deg, #17947C, #96fbc4);
@@ -77,13 +80,10 @@ li{
         color: transparent;
     }
 }
-
 .smiley:hover{
     color: #Fabe74;
 }
-
 /*HEADER*/
-
 header{
 
 /*GENERAL*/
@@ -112,6 +112,7 @@ header{
                 width:45px;
                 margin: 0 20px 20px 20px;
                 filter: drop-shadow(0px 2px 1px #1e2b28ab);
+                animation:  2.5s ease-out glissement ;
             }
             p{
                 font-family: 'Vidaloka', sans-serif;
@@ -133,8 +134,13 @@ header{
             li{
                 padding: 5px 40px;
             }
+            a{
+                text-transform: capitalize;
+            }
             a:hover{
-                color: #Fabe74;
+                color: #97FCC4;
+                text-decoration: wavy underline;
+                transition: 200ms;
             }
         } 
         
@@ -151,6 +157,7 @@ header{
         transform: rotate(90deg);
         padding: 0;
         z-index: 15;
+        
         img{
             width: 30px;
             transform: rotate(-90deg);
@@ -158,7 +165,7 @@ header{
         }
     }
 
-    .background{
+    /*.background{
         position: fixed;
         margin-top: 5rem;
         z-index: -1;
@@ -172,13 +179,11 @@ header{
         position: absolute;
         opacity: 0.4;
         z-index: -3;
-    }
+    }*/
 /*ACCEUIL*/
-
     .hero{
         padding: 15vw 10vw;
         display: flex;
-
         .texte{
             display: flex;
             flex-direction: column;
@@ -266,7 +271,7 @@ header{
             border-color: #97FCC4;
             animation:  2s ease-out glissementD;
             &:hover{
-                transition: 8s;
+                transition: 2s;
                 background-color: #97FCC4;
             }
         }
@@ -296,12 +301,11 @@ header{
         }
     }
 }
-
 /*MAIN*/
 main{
-    margin: 0rem 15rem;
+    margin:1vw 10vw;
 
-/* TITRES GENERAL DES GRILLES PROJETS */
+/* PAGE ACCEUIL TITRES PROJETS */
 
     .projets{
         display: flex;
@@ -334,12 +338,10 @@ main{
                 font-size: 16px;
                 margin: 0;
             }
-
         }
     }
 
 /*GRID & CARD*/
-
 .grille{
         display: grid;
         grid-template-columns: 15rem 15rem 15rem;
@@ -410,6 +412,7 @@ main{
         width: auto;
         height: auto;
         transition:800ms;
+        
     }
     .cartes_gde:hover h2{
         color: #Fabe74;
@@ -417,6 +420,7 @@ main{
     .cartes_gde:hover .txt_cartes{
         background: white;
         transition:800ms;
+        
     }
     .cartes:hover p{
         width: auto;
@@ -429,8 +433,7 @@ main{
         background: white;
     }
 
-    /* PAGE ACCEUIL > A PROPOS*/
-
+/* PAGE ACCEUIL > A PROPOS*/
     .apropos{
         margin: 10rem 0;
         display: flex;
@@ -451,7 +454,7 @@ main{
             }
     }
 
-    /* PAGE PROJET TYPE*/
+/* PAGE PROJET TYPE*/
     .content_projet{
         display: flex;
         justify-content: space-around;
@@ -472,21 +475,19 @@ main{
         }
     }
 
-    /* PAGE PROJET*/
+/* PAGE PROJET*/
     .content{
         display: flex;
-        align-items: center;
-        background-color: red;
+        align-items: flex-start;
         .web_portfolio{
         padding-top: 0rem;
         display: flex;
-            flex-direction: column;
-            justify-content: start;
-            align-items: flex-start;
-            background-color: red;
+        flex-direction: column;
+        justify-content: start;
+        
         }
+        
     }
-
 
     /*PAGE CONTACT*/
     .contact{
@@ -531,13 +532,13 @@ main{
         }   
     }
 }
-
 footer{
     height: 10vw;
     background: linear-gradient(60deg, #17947C,#96fbc4);
     display: flex;
     flex-direction: column;
     justify-content: center;
+    margin-top: 15vw;
     padding: 2rem;
     p
     {color: white;
@@ -547,7 +548,6 @@ footer{
 }
 
 @media all and(max-width: 992px){ 
-
     header{
 /*MENU BURGER*/
         nav{
@@ -673,4 +673,7 @@ footer{
     }
     }
 }    
+@media all and(max-width: 688px){
+
+}
 
