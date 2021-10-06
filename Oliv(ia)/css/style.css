@@ -626,8 +626,8 @@ main .txt_cartes {
 }
 
 main .txt_cartes p {
-  height: 0;
-  width: 0;
+  height: 0px;
+  width: 0px;
   overflow: hidden;
   margin: 0;
   padding: 0;
@@ -638,8 +638,8 @@ main .txt_cartes p {
 }
 
 main .cartes_gde:hover p {
-  width: auto;
-  height: auto;
+  width: 100%;
+  height: 100%;
   -webkit-transition: 800ms;
   transition: 800ms;
 }
@@ -852,21 +852,16 @@ footer p {
     cursor: pointer;
     z-index: 20;
   }
-  header nav .menu {
-    position: absolute;
-    top: 0;
-    left: 0;
-  }
-  header nav .ouvrir {
+  header nav .toggle .burger-menu {
     display: block;
   }
-  header nav .fermer {
+  header nav .toggle .cross-menu {
     display: none;
   }
-  header nav .open .ouvrir {
+  header nav .toggle.isOpened .burger-menu {
     display: none;
   }
-  header nav .open .fermer {
+  header nav .toggle.isOpened .cross-menu {
     display: block;
   }
   header nav .menu {
@@ -902,6 +897,9 @@ footer p {
     text-decoration: none;
     letter-spacing: .2rem;
     font-size: 1.5rem;
+  }
+  header nav.isOpened .menu {
+    opacity: 1;
   }
   header .hero {
     display: -webkit-box;
