@@ -1,6 +1,7 @@
-let toggle = document.querySelector('.toggle');
-let body = document.querySelector('body');
+const toggle = document.querySelector('.toggle')
+const nav = document.querySelector('nav')
 
 toggle.addEventListener('click', function() {
-    body.classList.toggle('open');
+    toggle.classList.toggle('isOpened')
+    nav.classList.toggle('isOpened')
 })
