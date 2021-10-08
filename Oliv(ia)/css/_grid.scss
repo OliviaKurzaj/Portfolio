@@ -1,0 +1,144 @@
+.grid{
+    display: grid;
+    grid-template-columns: 15rem 15rem 15rem;
+    gap: 2rem;
+    padding-bottom: 2rem;
+}
+
+.cards, .cards_lg, .cards_m{ 
+    position: relative;
+    display: block;
+    padding: 10px;
+    box-shadow: 5px 5px 5px 5px #cec7bd;
+    .image{
+        border-radius: 5px;
+        overflow: hidden;
+        height: 15rem;
+        animation: filter-animation 2.5s infinite;
+        &:hover{
+        animation: none;
+        }
+    }
+        &:hover{
+            transition: 1.5s;
+            filter: sepia(0%);
+        }
+        &:active{
+            filter: none;
+            box-shadow: 2px 2px 2px 2px #cec7bd;
+            transition: .1s;
+        }
+}
+.cards{
+    img{
+    height: 20rem;
+    }
+}
+.cards_m{
+    grid-column: 1/3;
+}
+.cards_lg{
+    grid-column: 1/4;
+}
+/*HOVER TEXTE*/
+.txt_cards{
+        position:absolute;
+        background-color: white;
+        border-radius:0 0 5px 5px ;
+        padding: 0.5rem;
+        transform: translate(-8px,-250px);
+        p{
+            height: 0;
+            width: 0;
+            overflow: hidden;
+            margin: 0;
+            padding: 0;
+            text-align: left;
+            font-size: 16px;
+            transition:500ms;
+        }
+} 
+.cards_lg:hover p{
+    width: 15rem;
+    height: 5rem;
+    transition: 500ms;
+    
+}
+.cards_lg:hover h4{
+    color: #Fabe74;
+    transition:500ms;
+}
+.cards_lg:hover .txt_cards{
+    background: white;
+    transition:800ms;
+    
+}
+.cards:hover p{
+    width: 13.5rem;
+    height: 5rem;
+}
+.cards:hover h4{
+    color: #Fabe74;
+}
+.cards:hover .txt_cards{
+    background: white;
+}
+
+@media all and(max-width: 992px){ 
+    .grid{
+        display: grid;
+        grid-template-columns: 15rem 15rem;
+        gap: 1rem;
+        padding-bottom: 1rem;
+        }
+        .cards_lg, .cards_m{   
+            grid-column: 1/2;
+    }
+    .cards{
+        img{
+        height: 15rem;
+        }
+    }
+}
+
+@media all and(max-width: 688px){
+    header{
+        .dev_par{
+            display: none;
+        }
+    }
+    main{
+        .grid{
+            display: grid;
+            grid-template-columns: 15rem;
+            gap: 1rem;
+            padding-bottom: 1rem;
+        }
+        .cards_lg, .cards_m{   
+            grid-column: 1;
+            &:active{
+                filter: none;
+                box-shadow: 2px 2px 2px 2px #cec7bd;
+                transition: .1s;
+            }
+        }
+        .cards{
+            img{
+                height: 15rem;
+            }
+            &:active{
+                filter: none;
+                box-shadow: 2px 2px 2px 2px #cec7bd;
+                transition: .1s;
+            }
+        }
+        .txt_cards{
+            display: block;
+            border-radius:0 0 5px 5px ;
+            padding: 0.5rem;
+            p{
+                display: none;
+            }
+        }
+    }   
+}

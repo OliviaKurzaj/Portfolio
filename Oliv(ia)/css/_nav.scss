@@ -22,7 +22,6 @@ nav{
             width:45px;
             margin: 0 20px 20px 20px;
             filter: drop-shadow(0px 2px 1px #1e2b28ab);
-            animation:  2.5s ease-out glissement ;
         }
         p{
             font-family: 'Vidaloka', sans-serif;
@@ -32,12 +31,12 @@ nav{
             color: #Fabe74;
         }
     }
-    .nav_centre{
+    .nav_center{
         display: flex;
         justify-content: center;
 
     }
-    .nav_centre ul{
+    .nav_center ul{
         display: flex;
         justify-content: space-around;
         padding: 0;
@@ -53,4 +52,105 @@ nav{
             transition: 200ms;
         }
     } 
+}
+
+.dev_by{
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    transform: rotate(90deg);
+    top: 45vh;
+    right: -90px;
+    z-index: 15;
+    img{
+        width: 30px;
+        transform: rotate(-90deg);
+        padding-top: 1rem;
+    }
+}
+
+@media all and(max-width: 992px){
+/*MENU BURGER*/
+nav{
+    padding-top: 0;
+    .toggle {
+        display: block;
+        position: absolute;
+        top: 1.2rem;
+        right: 2rem;
+        font-size: 1.75rem;
+        color: #96fbc4;
+        cursor: pointer;
+        z-index: 20;
+        &:hover{
+            transition: .5s;
+            transform: scale(1.2);}
+        &:active{
+            transform: rotate(90deg) scale(0.7);
+        }
+
+        .burger-menu{
+            display: block;
+        }
+        .cross-menu{
+            display: none;
+        }
+        &.isOpened{
+            .burger-menu{
+                display: none;
+            }
+            .cross-menu{
+                display: block;
+            }
+        }
+    }
+    
+    .menu {
+        width: 50%;
+        height: 50vh;
+        background: #17947C;
+        border-radius: 0 0 0 5px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        list-style: none;
+        opacity: 0;
+        transform: translateX(50%);
+        transition: all .5s;
+        margin: 0;
+        z-index: 19;
+    }
+    
+    .open .menu {
+        opacity: 1;
+        transform: translateX(50%);
+        transition: all .5s;
+    }
+    
+    .menu li a {
+        color: #fff;
+        text-decoration: none;
+        font-size: 16px;
+    }
+    
+    &.isOpened{
+        .menu{
+            opacity: 1;
+        }
+    }
+}
+}
+
+@media all and(max-width: 688px){
+    nav{
+        .menu{
+            width: 100%;
+            transform: translateX(0);
+        }
+    }
+    .dev_by{
+        display: none;
+    }
 }

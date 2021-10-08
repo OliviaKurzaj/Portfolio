@@ -1,0 +1,27 @@
+.button{
+    background: #18957D;    
+    border: none;
+    border-radius: 5px;
+    padding:0.6rem 0.8rem;
+    margin-top: 1rem;
+    display: inline-block;
+    animation:  2s ease-out slideL;
+        a{
+            color: white;
+    }
+    &:hover{
+        box-shadow: 0px 2px 5px #06382e71;
+        background: linear-gradient(60deg, #18957D, #97FCC4);
+        transform: scale(1.01);
+        transition: 200ms;
+        .smiley{
+            font-weight: 800;
+        }
+    }
+    &:active{
+        box-shadow:inset 1px 1px #06382e71;
+        background: linear-gradient(60deg, #18957D, #97FCC4);
+        transform: scale(1);
+        transition: 400ms;
+    }
+}
