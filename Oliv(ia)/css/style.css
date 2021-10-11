@@ -204,6 +204,18 @@ nav .nav_center ul a:hover {
   padding-bottom: 2rem;
 }
 
+.grid .image {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 .cards, .cards_lg, .cards_m {
   position: relative;
   display: block;
@@ -533,7 +545,6 @@ nav .nav_center ul a:hover {
 
 /*BODY*/
 body {
-  background-image: url("back.png");
   background-size: cover;
   z-index: -10;
   margin: 0;
@@ -846,7 +857,7 @@ main .about .animation img {
   height: 100%;
 }
 
-main .content_projet {
+main .content_project {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -856,23 +867,42 @@ main .content_projet {
   padding-bottom: 5rem;
 }
 
-main .content_projet .title_project {
+main .content_project h3 {
+  font-weight: 600;
+}
+
+main .content_project .title_project {
   -webkit-animation: 2s ease-out slideL;
           animation: 2s ease-out slideL;
 }
 
-main .content_projet .explications {
+main .content_project .explications {
   padding-left: 1rem;
   border-left: solid 1px #97FCC4;
 }
 
-main .grid_project .cards_lg {
-  margin-bottom: 2rem;
+main .yaouen {
+  color: #032435;
 }
 
-main .grid_project .cards_lg .image {
-  -webkit-animation: none;
-          animation: none;
+main .grid_project {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main .grid_project .image img {
+  width: 100%;
   height: auto;
 }
 
@@ -1025,7 +1055,7 @@ footer p {
   }
   main {
     margin: 0 5rem;
-    /* PAGE ACCEUIL */
+    /* PAGE Home */
   }
   main .about {
     margin: 10rem 0;
@@ -1063,7 +1093,8 @@ footer p {
 @media all and (max-width: 688px) {
   main {
     margin: 0 2rem;
-    /* PAGE PROJET > TEXTE A COTE GRID */
+    /* PAGE Portfolio > Text */
+    /* PAGE Project > Text */
   }
   main .content {
     display: -webkit-box;
@@ -1077,6 +1108,24 @@ footer p {
         -ms-flex-align: center;
             align-items: center;
     text-align: center;
+  }
+  main .content_project {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  main .content_project .explications {
+    padding-top: 1rem;
+    border-top: solid 1px #97FCC4;
+    padding-left: 0;
+    border-left: none;
   }
 }
 /*# sourceMappingURL=style.css.map */

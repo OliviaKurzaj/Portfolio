@@ -3,6 +3,11 @@
     grid-template-columns: 15rem 15rem 15rem;
     gap: 2rem;
     padding-bottom: 2rem;
+    .image{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 }
 
 .cards, .cards_lg, .cards_m{ 
@@ -39,6 +44,7 @@
 }
 .cards_lg{
     grid-column: 1/4;
+    
 }
 /*HOVER TEXTE*/
 .txt_cards{
