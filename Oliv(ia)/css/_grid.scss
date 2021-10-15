@@ -14,7 +14,8 @@
     position: relative;
     display: block;
     padding: 10px;
-    box-shadow: 5px 5px 5px 5px #cec7bd;
+    box-shadow: 4px 4px 4px 3px #273f3a2c;
+    background-color: white;
     .image{
         border-radius: 5px;
         overflow: hidden;
@@ -25,12 +26,13 @@
         }
     }
         &:hover{
-            transition: 1.5s;
+            transition: .1s;
             filter: sepia(0%);
+            box-shadow: 6px 6px 6px 6px #273f3a2c;
         }
         &:active{
             filter: none;
-            box-shadow: 2px 2px 2px 2px #cec7bd;
+            box-shadow: 2px 2px 2px 2px #273f3a2c;
             transition: .1s;
         }
 }
@@ -65,26 +67,49 @@
         }
 } 
 .cards_lg:hover p{
-    width: 15rem;
+    width: 20rem;
     height: 5rem;
     transition: 500ms;
     
 }
 .cards_lg:hover h4{
-    color: #Fabe74;
-    transition:500ms;
+    background-image: linear-gradient(70deg, #96fbc4, #17947C, #96fbc4);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    transition: 400ms;
 }
 .cards_lg:hover .txt_cards{
     background: white;
     transition:800ms;
+}
+.cards_m:hover p{
+    width: 20rem;
+    height: 5rem;
+    transition: 500ms;
     
+}
+.cards_m:hover h4{
+    background-image: linear-gradient(70deg, #96fbc4, #17947C, #96fbc4);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    transition: 400ms;
+}
+.cards_m:hover .txt_cards{
+    background: white;
+    transition:800ms;
 }
 .cards:hover p{
     width: 13.5rem;
     height: 5rem;
 }
 .cards:hover h4{
-    color: #Fabe74;
+    background-image: linear-gradient(70deg, #96fbc4, #17947C, #96fbc4);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    transition: 400ms;
 }
 .cards:hover .txt_cards{
     background: white;
@@ -97,7 +122,7 @@
         gap: 1rem;
         padding-bottom: 1rem;
         }
-        .cards_lg, .cards_m{   
+        .cards_lg{   
             grid-column: 1/2;
     }
     .cards{

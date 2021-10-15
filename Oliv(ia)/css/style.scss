@@ -44,6 +44,12 @@ filter: sepia(1) blur(0.5px)/*hue-rotate(100deg)*/;
         filter: sepia(1) blur(0.5px)/*hue-rotate(100deg)*/;
     }
 }
+@keyframes color-text{
+    0% { color: red; }
+    50% { color: blue; }
+    100% { color: red; }
+}
+
 
 /*FONT*/
 @font-face {
@@ -57,6 +63,7 @@ filter: sepia(1) blur(0.5px)/*hue-rotate(100deg)*/;
 
 /*BODY*/
 body{
+    /*background: 100% url('back_.png');*/
     background-size: cover;
     z-index: -10;
     margin: 0;
@@ -70,7 +77,7 @@ body{
     }
     ::selection {
         color: white;
-        background-color: #fabe74cb;
+        background-color: #96fbc3bd;
     }
     h1{
         font-family: 'Vidaloka', serif;
@@ -134,17 +141,22 @@ header{
     .hero{
         padding: 15vw 10vw;
         display: flex;
+        h1{
+            animation: 1s color-text 1s infinite;
+        }
         .text{
             display: flex;
             flex-direction: column;
             justify-content: center;
-            align-items: flex-start;           
+            align-items: flex-start;       
         }
         .animation{
             width: 50vw;
             display: flex;
             justify-content: center;
+            
             img{
+                animation:  2s ease-out slide;
                 width: 300px;
                 height: 100%;
             }
@@ -187,15 +199,16 @@ header{
         .obj{
             border: solid 3px;
             border-color: #97FCC4;
-            animation:  2s ease-out slideL;
+            animation:  1s ease-out slideL;
             &:hover{
-                transition: 2s;
+                transition: 1s;
                 background-color: #97FCC4;
             }
         }
     }
     /* PAGE Contact*/
     .hero_contact{
+        padding: 15vw 5vw;
         display: flex;
         justify-content: center;
         
@@ -237,7 +250,7 @@ main{
     }
     /* PAGE > Home > About */
     .about{
-        margin: 10rem 0;
+        margin: 8rem 0;
         display: flex;
         .text{
             display: flex;
@@ -280,6 +293,7 @@ main{
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        margin-bottom: 10rem;
         .image{
             img{
             width: 100%;
@@ -292,42 +306,65 @@ main{
         display: flex;
         align-items: flex-start;
         .web_portfolio{
-        padding-top: 0rem;
+        padding: 0 1rem 1rem  0;
         display: flex;
         flex-direction: column;
         justify-content: start;
         }
-        
+    }
+    #web{
+        padding: 3rem;
+    }
+    #obj{
+        position: absolute;
+        transform: translateY(-40px);
     }
     /*PAGE CONTACT*/
-    .contact{
-        margin: 5rem;
+        .contact{
+            display: flex;
+            padding: 10vw 0vw;
+            .hero_contact{
+                padding-right: 1rem;
+            }
+        }
         .tel{
             display: flex;
             justify-content: center;
-            font-family: 'vidaloka';
-            font-size: 28px;
-            background-color: #F9F1E5;
-            background-size: cover;
+            font-size: 28px;            
             border-radius: 5px;
+            border: dashed 0.5px #18957D;
+            margin-top: 1rem;
         }
         .form{
+            width: 70vw;
+            padding-top: 2rem;
             display: flex;
             justify-content: center;
-            margin-top: 5rem;
-            background-color: #f9f1e5d5;
-            background-image: url("back.png");
-            background-size: cover;
+            background: center/14%  url("Oliv_form_patern.png") ;
+            backdrop-filter: blur(20px);
             border-radius: 5px;
+            color: #17947C;
+            font-size: 20px;
             label{
                 display: flex;
-                padding: 1rem;
+                padding: 1rem 1rem 0.25rem 1rem;
+                width: 100%;
+                color: #18957D;
+                text-shadow: 1px 1px 2px #273f3a86;
             }
             input, textarea{
                 padding: 1rem;
-                border: none;
+                border: dashed 0.5px #18957D;
                 border-radius: 5px;    
-                width: 25vw;
+                width: 100%;
+                background: #ffffffc5;
+                backdrop-filter: blur(1.5rem);
+                border-radius: 5px;
+                color: #18957D;
+                box-shadow: 4px 4px 4px rgba(220, 220, 220, 0.753);
+                font-family: 'Nunito';
+                font-size: 16px;
+                font-weight: 600;
             }   
             textarea{
                 height: 25vh;
@@ -344,23 +381,25 @@ main{
             }
         }   
     }
-}
+
 
 /* FOOTER */
 footer{
     height: 10vw;
-    background: linear-gradient(60deg, #17947C,#96fbc4);
+    background-image: linear-gradient(#FFF, rgba(255, 255, 255, 0.521), rgba(255, 255, 255, 0)), url('backfoot.png');
+    background-size: cover;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin-top: 15vw;
+    margin-top: 5vw;
     padding: 2rem;
-    p
-    {color: white;
+    p{
+    color: #17947C;
     font-size: 14px;
     margin: 0;
     }
 }
+
 
 /* RESPONSIV TABLET */
 @media all and(max-width: 992px){ 
@@ -410,14 +449,69 @@ footer{
                 }
             }
         }
+        /* PAGE Contact */
+        .contact{
+            display: flex;
+            flex-direction: column;
+            gap: 5rem;
+            padding: 15vw 0vw;
+            align-items: center;
+        }
     }
 }
 
 /* RESPONSIV MOBIL */
 @media all and(max-width: 688px){
     
+    header{
+        .nav_portfolio{
+            padding: 0vw 10vw 10vw 10vw;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: end;
+            .web, .obj, .autre{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                text-align: center;
+                width: 7rem;
+                height: 7rem;
+                border-radius: 5rem;
+                
+            }
+            .web{
+                color: white;
+                background:  #18957D;
+                height: 25rem;
+                border-radius: 0 0 5rem 5rem;
+                justify-content: end;
+                padding-bottom: 4rem;
+                animation:  2s ease-out slide ;
+                margin-right: 0.25rem;
+                h2{
+                    padding-bottom: 5rem;
+                    font-size: 24px;
+                    animation:  2s ease-out 50ms slide ;
+                }
+                &:hover{
+                    transition: 8s;
+                    background: linear-gradient(#18957D, #97FCC4);
+                }
+            }
+            .obj{
+                border: solid 3px;
+                border-color: #97FCC4;
+                animation:  2s ease-out slideL;
+                margin-left: 0.25rem;
+                &:hover{
+                    transition: 2s;
+                    background-color: #97FCC4;
+                }
+            }
+        }
+    }
     main{
-        margin: 0 2rem;
+        margin: 0 1rem;
         /* PAGE Portfolio > Text */
         .content{
             display: flex;
