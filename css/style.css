@@ -91,7 +91,7 @@ nav .nav_center ul a:hover {
   -webkit-transform: rotate(90deg);
           transform: rotate(90deg);
   top: 45vh;
-  right: -90px;
+  right: -80px;
   z-index: 15;
 }
 
