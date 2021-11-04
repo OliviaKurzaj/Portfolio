@@ -340,8 +340,7 @@ main{
             padding-top: 2rem;
             display: flex;
             justify-content: center;
-            background: center/14%  url("Oliv_form_patern.png") ;
-            backdrop-filter: blur(20px);
+            backdrop-filter: blur(10px);
             border-radius: 5px;
             color: #17947C;
             font-size: 20px;
@@ -350,15 +349,16 @@ main{
                 padding: 1rem 1rem 0.25rem 1rem;
                 width: 100%;
                 color: #18957D;
-                text-shadow: 1px 1px 2px #273f3a86;
+                /*text-shadow: 1px 1px 2px #273f3a86;*/
             }
             input, textarea{
                 padding: 1rem;
                 border: dashed 0.5px #18957D;
                 border-radius: 5px;    
                 width: 100%;
-                background: #ffffffc5;
-                backdrop-filter: blur(1.5rem);
+                background: url("back_.png") ;
+                background-size: cover;
+                backdrop-filter: blur(3rem);
                 border-radius: 5px;
                 color: #18957D;
                 box-shadow: 4px 4px 4px rgba(220, 220, 220, 0.753);
@@ -385,18 +385,19 @@ main{
 
 /* FOOTER */
 footer{
-    height: 10vw;
+    height: 15vw;
     background-image: linear-gradient(#FFF, rgba(255, 255, 255, 0.521), rgba(255, 255, 255, 0)), url('backfoot.png');
     background-size: cover;
     display: flex;
     flex-direction: column;
     justify-content: center;
     margin-top: 5vw;
-    padding: 2rem;
+    padding: 6rem 0 2rem 0;
     p{
     color: #17947C;
     font-size: 14px;
     margin: 0;
+    text-align: center;
     }
 }
 
