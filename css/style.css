@@ -1006,6 +1006,10 @@ main .yaouen {
   color: #032435;
 }
 
+main .rocketed {
+  color: #BE2497;
+}
+
 main .grid_project {
   display: -webkit-box;
   display: -ms-flexbox;
