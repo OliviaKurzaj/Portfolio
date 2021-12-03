@@ -299,7 +299,7 @@ main{
         margin-bottom: 10rem;
         .image{
             img{
-            width: 100%;
+            width: 50%;
             height: auto;
         }
         }
@@ -313,6 +313,7 @@ main{
         display: flex;
         flex-direction: column;
         justify-content: start;
+        width: 250px;
         }
     }
     #web{

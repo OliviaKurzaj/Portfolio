@@ -1028,7 +1028,7 @@ main .grid_project {
 }
 
 main .grid_project .image img {
-  width: 100%;
+  width: 50%;
   height: auto;
 }
 
@@ -1053,6 +1053,7 @@ main .content .web_portfolio {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: start;
+  width: 250px;
 }
 
 main #web {
