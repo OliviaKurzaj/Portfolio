@@ -284,8 +284,7 @@ nav .nav_center ul a:hover {
   border-radius: 5px;
   overflow: hidden;
   height: 15rem;
-  -webkit-animation: filter-animation 2.5s infinite;
-          animation: filter-animation 2.5s infinite;
+  /* animation: filter-animation 2.5s ease-in-out;*/
 }
 
 .cards .image:hover, .cards_lg .image:hover, .cards_m .image:hover {
@@ -479,7 +478,7 @@ nav .nav_center ul a:hover {
   background: #18957D;
   border: none;
   border-radius: 5px;
-  padding: 0.6rem 0.8rem;
+  padding: 1rem 1.5rem;
   margin-top: 1rem;
   display: inline-block;
   -webkit-animation: 2s ease-out slideL;
@@ -1027,8 +1026,11 @@ main .grid_project {
   margin-bottom: 10rem;
 }
 
+main .grid_project .image {
+  margin-bottom: 3rem;
+}
+
 main .grid_project .image img {
-  width: 50%;
   height: auto;
 }
 
