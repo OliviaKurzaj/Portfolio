@@ -2,36 +2,41 @@
     display: grid;
     grid-template-columns: 15rem 15rem 15rem;
     gap: 2rem;
-    padding-bottom: 2rem;
+    padding: 4rem;
+    background-image: url('back_hero.png');
+    background-size: contain;
     .image{
         display: flex;
         justify-content: center;
         align-items: center;
     }
 }
-
 .cards, .cards_lg, .cards_m{ 
     position: relative;
     display: block;
     padding: 10px;
     box-shadow: 4px 4px 4px 3px #273f3a2c;
     background-color: white;
+    transition: .8s;
     .image{
         border-radius: 5px;
         overflow: hidden;
         height: 15rem;
+        filter: grayscale(1);
+        transition: .4s;
         /* animation: filter-animation 2.5s ease-in-out;*/
         &:hover{
-        animation: none;
+        transition: .4s;
+        filter: grayscale(0);
         }
     }
         &:hover{
-            transition: .1s;
-            filter: sepia(0%);
+            transition: .8s;
+            transform: scale(1.2);
             box-shadow: 6px 6px 6px 6px #273f3a2c;
+            z-index: 5;
         }
         &:active{
-            filter: none;
             box-shadow: 2px 2px 2px 2px #273f3a2c;
             transition: .1s;
         }
@@ -43,10 +48,19 @@
 }
 .cards_m{
     grid-column: 1/3;
+    .image{
+        img{
+            width: 100%;
+        }
+    }
 }
 .cards_lg{
     grid-column: 1/4;
-    
+    .image{
+        img{
+            width: 100%;
+        }
+    }
 }
 /*HOVER TEXTE*/
 .txt_cards{
@@ -55,6 +69,7 @@
         border-radius:0 0 5px 5px ;
         padding: 0.5rem;
         transform: translate(-8px,-250px);
+        opacity: 0;
         p{
             height: 0;
             width: 0;
@@ -63,31 +78,32 @@
             padding: 0;
             text-align: left;
             font-size: 16px;
-            transition:500ms;
+            transition: .4s;
         }
 } 
+.cards_lg:hover .txt_cards{
+    opacity: 1;
+    transition: .4s;
+}
 .cards_lg:hover p{
-    width: 20rem;
-    height: 5rem;
-    transition: 500ms;
-    
+    width: auto;
+    height: 1.5rem;
+    transition: .4s;
+    opacity: 1;
 }
 .cards_lg:hover h4{
-    background-image: linear-gradient(70deg, #96fbc4, #17947C, #96fbc4);
-    background-clip: text;
-    -webkit-background-clip: text;
-    color: transparent;
-    transition: 400ms;
+    transition: .8s;
 }
 .cards_lg:hover .txt_cards{
-    background: white;
-    transition:800ms;
+    opacity: 1;
+    transition: .4s;
 }
 .cards_m:hover p{
-    width: 20rem;
-    height: 5rem;
-    transition: 500ms;
-    
+    width: auto;
+    height: 1.5rem;
+    transition: .4s;
+    opacity: 1;
+    background: white;
 }
 .cards_m:hover h4{
     background-image: linear-gradient(70deg, #96fbc4, #17947C, #96fbc4);
@@ -98,11 +114,14 @@
 }
 .cards_m:hover .txt_cards{
     background: white;
+    opacity: 1;
     transition:800ms;
 }
 .cards:hover p{
-    width: 13.5rem;
-    height: 5rem;
+    width: auto;
+    height: 1.5rem;
+    transition: .4s;
+    opacity: 1;
 }
 .cards:hover h4{
     background-image: linear-gradient(70deg, #96fbc4, #17947C, #96fbc4);
@@ -113,6 +132,8 @@
 }
 .cards:hover .txt_cards{
     background: white;
+    opacity: 1;
+    transition: .4s;
 }
 
 @media all and(max-width: 992px){ 
@@ -121,8 +142,10 @@
         grid-template-columns: 15rem 15rem;
         gap: 1rem;
         padding-bottom: 1rem;
+        background-image: url('back_hero.png');
+        background-size: 130%;
         }
-        .cards_lg{   
+        .cards_lg, .cards_m{   
             grid-column: 1/2;
     }
     .cards{
@@ -142,8 +165,11 @@
         .grid{
             display: grid;
             grid-template-columns: 15rem;
-            gap: 1rem;
-            padding-bottom: 1rem;
+            gap: 2rem;
+            margin: 0;
+            padding: 4rem;
+            background-image: url('back_hero.png');
+            background-size: 250%;
         }
         .cards_lg, .cards_m{   
             grid-column: 1;
