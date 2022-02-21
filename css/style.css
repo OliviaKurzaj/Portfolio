@@ -1254,7 +1254,7 @@ main .grid_project {
 }
 
 main .grid_project p {
-  padding-top: 5rem;
+  padding: 5rem 1rem 1rem 1rem;
 }
 
 main .grid_project .image {
@@ -1280,14 +1280,6 @@ main .grid_project .image img {
 main .grid_project .image video {
   width: 30%;
   height: auto;
-}
-
-main .yaouen {
-  color: #032435;
-}
-
-main .rocketed {
-  color: #032435;
 }
 
 main .content {
@@ -1713,12 +1705,31 @@ footer .txt_footer p {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    padding: 6rem 3rem 3rem 3rem;
   }
   main .content_project .explications {
     padding-top: 1rem;
     border-top: solid 1px #97FCC4;
     padding-left: 0;
     border-left: none;
+  }
+  main .grid_project {
+    margin-bottom: 6rem;
+  }
+  main .grid_project p {
+    padding-top: 5rem;
+  }
+  main .grid_project .image {
+    width: 300px;
+  }
+  main .grid_project .image .double {
+    width: 50%;
+  }
+  main .grid_project .image img {
+    width: 100%;
+  }
+  main .grid_project .image video {
+    width: 40%;
   }
   main .hero_contact .title_contact {
     padding: 2rem;
