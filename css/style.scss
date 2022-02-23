@@ -326,9 +326,6 @@ main{
             p{
                 padding-top: 1rem;
             }
-            .button{
-                margin-top: 3rem;
-            }
         }
         .animation{
             width: 40vw;
@@ -394,6 +391,9 @@ main{
         display: flex;
         flex-direction: column;
         align-items: center;
+        padding-bottom: 3rem;
+        display: flex;
+        text-align: center;
         .web_portfolio{
             h2{
                 margin: 0;
@@ -401,9 +401,6 @@ main{
             .txt h3{
                 padding-top: 1rem;
             }
-        padding-bottom: 3rem;
-        display: flex;
-        text-align: center;
         }
     }
     #web, #obj{
@@ -420,7 +417,6 @@ main{
                 background-image: url('Component3.png');
             }
             .hero_contact{
-                width: 100%;
                 display: flex;
                 flex-direction: column;
                 justify-content:center;
@@ -491,7 +487,6 @@ main{
                 height: 15rem;
             }
             .button{
-                width: 40%;
                 margin: 2rem;
                 display: flex;
                 justify-content: center;
@@ -673,6 +668,7 @@ footer{
                 animation: none;
             }
         }
+
     }
     main{
         .anim{
@@ -743,10 +739,18 @@ footer{
             }
         }
     }
-
-        .hero_contact .title_contact{
-            padding: 2rem;
+        /* PAGE Contact*/
+        .contact{
+        .hero_contact{
+            width: 100%;
+            p{
+                padding: 2rem 2rem 0 2rem;
+                margin: 0;
+            }
+            .tel{
+                width: auto;
+            }
         }
     }   
-
+}
 }

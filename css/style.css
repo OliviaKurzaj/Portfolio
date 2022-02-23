@@ -631,15 +631,36 @@ nav .nav_center ul li:active {
 }
 
 .content_button {
+  margin-top: 3rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+@media all and (max-width: 688px) {
+  .button3 {
+    margin-top: 1rem;
+  }
+  .content_button {
+    margin-top: 3rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: space-around;
+        -ms-flex-align: space-around;
+            align-items: space-around;
+  }
 }
 
 /*ANIMATIONS*/
@@ -1224,10 +1245,6 @@ main .about .text p {
   padding-top: 1rem;
 }
 
-main .about .text .button {
-  margin-top: 3rem;
-}
-
 main .about .animation {
   width: 40vw;
   display: -webkit-box;
@@ -1331,12 +1348,7 @@ main .content {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-}
-
-main .content .web_portfolio {
   padding-bottom: 3rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   text-align: center;
 }
@@ -1375,7 +1387,6 @@ main .contact .title_contact {
 }
 
 main .contact .hero_contact {
-  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1481,7 +1492,6 @@ main .form textarea {
 }
 
 main .form .button {
-  width: 40%;
   margin: 2rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1738,6 +1748,7 @@ footer .txt_footer p {
   main {
     /* PAGE Portfolio > Text */
     /* PAGE Project > Text */
+    /* PAGE Contact*/
   }
   main .anim {
     padding: 6rem 4rem;
@@ -1820,8 +1831,15 @@ footer .txt_footer p {
   main .grid_project .image video {
     width: 40%;
   }
-  main .hero_contact .title_contact {
-    padding: 2rem;
+  main .contact .hero_contact {
+    width: 100%;
+  }
+  main .contact .hero_contact p {
+    padding: 2rem 2rem 0 2rem;
+    margin: 0;
+  }
+  main .contact .hero_contact .tel {
+    width: auto;
   }
 }
 /*# sourceMappingURL=style.css.map */

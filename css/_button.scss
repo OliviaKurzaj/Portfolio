@@ -58,7 +58,21 @@
 }
 
 .content_button{
+    margin-top: 3rem;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
+}
+
+@media all and(max-width: 688px){
+    .button3{
+        margin-top: 1rem;
+    }
+    .content_button{
+        margin-top: 3rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: space-around;
+    }
 }
