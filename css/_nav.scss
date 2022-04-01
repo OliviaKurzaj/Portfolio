@@ -112,10 +112,10 @@ nav{
         transition: .5s;
         &:hover{
             transition: .5s;
-            transform: scale(1.2);}
+            transform: rotate(2turn) scale(1.2);}
         &:active{
             transition: .5s;
-            transform: rotate(1turn) scale(0.7);
+            transform: rotate(2turn) scale(0.7);
         }
 
         .burger-menu{

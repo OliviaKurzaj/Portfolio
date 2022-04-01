@@ -164,14 +164,14 @@ nav .nav_center ul li:active {
   nav .toggle:hover {
     -webkit-transition: .5s;
     transition: .5s;
-    -webkit-transform: scale(1.2);
-            transform: scale(1.2);
+    -webkit-transform: rotate(2turn) scale(1.2);
+            transform: rotate(2turn) scale(1.2);
   }
   nav .toggle:active {
     -webkit-transition: .5s;
     transition: .5s;
-    -webkit-transform: rotate(1turn) scale(0.7);
-            transform: rotate(1turn) scale(0.7);
+    -webkit-transform: rotate(2turn) scale(0.7);
+            transform: rotate(2turn) scale(0.7);
   }
   nav .toggle .burger-menu {
     display: block;
