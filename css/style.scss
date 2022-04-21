@@ -20,7 +20,7 @@
 }
 @keyframes slideL {
     0% {
-        
+        opacity: 0;
         transform: translateX(-1200px);
     }
     70% {
@@ -30,6 +30,7 @@
         transform: translateX(-20px);
     }
     100% {
+        opacity: 1;
         transform: translateX(0px);
     }
 }
@@ -53,10 +54,60 @@ filter: sepia(1) blur(0.5px)/*hue-rotate(100deg)*/;
     to{transform: rotate(1turn);} 
 }
 @keyframes opa {
-    from{opacity: .5;}
-    to{opacity: 1;}
+    0%{opacity: 0;}
+    60%{opacity: 0;}
+    100%{opacity: 1;}
 }
+@keyframes color_text {
+    0%{
+        background-position: 0% 50%;
+    }
+    50%{
+        background-position: 100% 100%;
+    }
+    100%{
+        background-position: 0% 50%;
+    }
+}
+@keyframes open{
+    0%{
+        background: linear-gradient(white, white );
+        opacity: 0;
+    }
+    30%{
+        background: linear-gradient(#f7f0e9, white );
+    }
+    100%{
+        background: linear-gradient(#f7f0e9,#f7f0e9, white );
+    }
+}
+@keyframes rond {
+    0%{
+    transform: matrix3d(
+    1,0,1,0,
+    0,1,0,0,
+    0,0,1,0,
+    -10,-50,0,1.1
+);
+    }
+    50%{
+    transform: matrix3d(
+    1,0,0,0,
+    0,1,0,0,
+    0,0,1,0,
+    30,50,0,1.1
+    )
+    }
+    100%{
+    transform: matrix3d(
+    1,0,0,0,
+    0,1,0,0,
+    0,0,1,0,
+    -10,-50,0,1.1
+    );
+    }
 
+}
 /*FONT*/
 @font-face {
     font-family: 'Vidaloka', serif;
@@ -69,38 +120,35 @@ filter: sepia(1) blur(0.5px)/*hue-rotate(100deg)*/;
 
 /*BODY*/
 body{
-    /*background: 100% url('back_.png');*/
-    background-size: cover;
+    /*background: 100% url('back_.png');
+    background-size: cover;*/
     z-index: -10;
     margin: 0;
-    padding: 0;
+    padding: 0px;
     color: #18957D;
     font-family: 'Nunito';
     font-size: 18px;
-    font-weight: 300;
-    background-color: #fffefd;
-    cursor: crosshair;
-    
+    font-weight: 300; 
     p{
         margin: 0;
     }
     ::selection {
-        color: white;
+        color: #f7f0e9;
         background-color: #18957D;
     }
     h1{
-        font-family: 'Vidaloka', serif;
+        font-family: 'Nunito', serif;
         font-weight: 500;
         font-size: 75px;
         margin: 0;
     }
     h2{
-        font-family: 'Vidaloka', serif;
+        font-family: 'Nunito';
         font-weight: 500;
-        font-size: 48px;
-        background-image: url('Component3.png');
-        padding: 1rem;
-        border-bottom: #96fbc4 solid 2px;
+        font-size: 50px;
+        color: #18957D;
+        padding-bottom: 1rem;
+        border-bottom: solid 2px #97FCC4;
     }
     h3{
         font-weight: 300;
@@ -114,12 +162,12 @@ body{
         margin: 0;
     }
     strong{
-        font-weight: 300;
+        font-weight: 500;
     }
     a{
         text-decoration: none;
         color: #18957D;
-        cursor: move;
+        cursor: crosshair;
     }
     li{
         list-style: none;
@@ -128,9 +176,7 @@ body{
     span{
         font-weight: 700;
     }
-    .smiley:hover{
-        color: #Fabe74;
-    }
+
     .subtitle{
         font-weight: 600;
         p{
@@ -139,11 +185,8 @@ body{
     }
 }
 .grey{
-    p,a, h1, h2, h3{
+    p,a, h1, h2, h3, .link{
     color: #222726;
-    }
-    a:hover{
-        color: #18957D;
     }
     .dev_by img, .logo lottie-player{
         filter: grayscale(1);
@@ -154,103 +197,186 @@ body{
 header{
     /*ACCEUIL*/
     .hero{
+        animation: open 3s ease;
         padding: 10rem 12rem 0rem 12rem;
         display: flex;
-        align-items: center;
-        background-image: url('back_hero.png');
-        background-repeat: no-repeat;
-        background-size: 70%;
-        background-position-x: 55vw;
-        h1{
-            animation: opa .8s ease-in;
-            &:hover{
-                transition: 2s;
-                background-image: linear-gradient(80deg, #17947C,#96fbc4, #17947C,#96fbc4, #17947C, #96fbc4 );
-                background-clip: text;
-                -webkit-background-clip: text;
-                color: transparent;
-            }
-        }
+        align-items: center;   
+        background-image: linear-gradient(#f7f0e9,#f7f0e9, white );
         .text{
             display: flex;
             flex-direction: column;
             justify-content: center;
-            align-items: flex-start;            
+            align-items: flex-start;  
+            animation: opa 4s ease-in; 
+            width: 40vw;
+        h1{
+            font-family: 'Nunito';
+            background-image: linear-gradient(80deg, #17947C,#96fbc4, #17947C,#96fbc4, );
+            background-size: 200% 200%;
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            animation: color_text 6s infinite linear;
+            line-height: 4.5rem;
+            padding-bottom: 2rem;
+        }
+        p{
+            font-style: italic;
+        }
         }
         .button{
             margin-top: 3rem;
         }
         .animation{
             width: 50vw;
+            padding: 2rem;
             display: flex;
             justify-content: center;
-            
-            img{
-                width: 300px;
-                height: 100%;
+            animation: hero 2.5s ease-out;
+            transition: 1.5s;
+        }
+        @keyframes hero {
+            0%{
+                transform: scale(0%) translateX(100%) translateY(100%);
+            }
+            70%{
+                transform: scale(105%);
+            }
+            100%{
+                transform: scale(100%);
             }
         }
     }
     /*PAGE Portfolio*/
     .nav_portfolio{
-        padding: 0vw 10vw 10vw 10vw;
+        height: 100vh;
+        animation: open 2s ease;
+        padding: 0vw 2vw 2vw 2vw;
         display: flex;
         justify-content: space-evenly;
-        align-items: end;
-        background-image: url('back_hero.png');
+        align-items: center;
+        background: linear-gradient(#f7f0e9,#f7f0e9, white );
+        /*background-image: url('back_hero.png');*/
         .web, .obj, .autre{
             display: flex;
             flex-direction: column;
             justify-content: center;
             text-align: center;
-            width: 10rem;
+            width: 14rem;
             height: 10rem;
             border-radius: 5rem;
         }
-        img{
+        &::before{
+            content: '';
             position: absolute;
-            animation: rot 2.5s linear infinite;
+            width: 300px;
+            height: 300px;
+            border-radius:250px;
+            background: #Fabe74;
+            animation: rond 6s infinite ease-in-out;
+            top: 20%;
+            left:35%;
+        }
+        &::after{
+            content: '';
+            position: absolute;
+            width: 350px;
+            height: 350px;
+            border-radius:250px;
+            background: #96fbc4;
+            animation: rond 5.5s infinite ease-in-out;
+            top:40%;
+            left:50%;
+            z-index: -2;
         }
         .web{
-            margin-top: 15rem;
+            animation:  3s ease-out slide;
+            margin-top: 0;
             justify-content: end;
             transition: .8s;
             text-align: right;
+            &::before{
+                content: '';
+                position: absolute;
+                width: 50px;
+                height: 50px;
+                border-radius:100px;
+                background: #fabe74;
+                animation: rond 6s infinite ease-in-out;
+            }
             h1{
                 z-index: 5;
                 font-size: 48px;
             }
-            &:hover{
-                
-            transition: .4s;
-                color: #Fabe74;
-                transform: scale(1.2);
+            &::after{
+                content: '';
+                width: 110%;
+                height: 90px;
+                z-index: 1;
+                background-color: #96fbc4;
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                border-radius: 50px;
+                transform: scaleX(0);
+                transform-origin: left;
+                transition: transform .5s ease;
             }
-            &:hover img{
+            &:hover::after{
+                transform: scaleX(1);
+            }
+            &:hover{
             transition: .4s;
-                opacity: 0;
+            transform: scale(1.2);
             }
         }
         .obj{
-            animation:  2s ease-out slide;
+            animation:  3.5s ease-out slide;
             transition: .8s;
+            &::before{
+                content: '';
+                position: absolute;
+                width: 50px;
+                height: 50px;
+                border-radius:100px;
+                background: #fabe74;
+                animation: rond 6.5s infinite ease-in-out;
+            }
             h1{
                 transition: .4s;
                 z-index: 5;
                 font-size: 48px;
+                position: relative;
+                padding: 0;
+                margin: 0;
+            }
+            &::after{
+                content: '';
+                width: 80%;
+                height: 85px;
+                z-index: 1;
+                background-color: #96fbc4;
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                border-radius: 50px;
+                transform: scaleX(0);
+                transform-origin: left;
+                transition: transform .5s ease;
+            }
+            &:hover::after{
+                transform: scaleX(1);
             }
             &:hover{
-                transition: .4s;
-                transform: scale(1.2);
+                transition: .5s;
+            transform: scale(1.2);
             }
-            &:hover img{
-                transition: .4s;
-                opacity: 0;
-            }
+            
         }
     }
     /* PAGE Contact*/
     .hero_contact{
+
         padding: 15vw 5vw;
         display: flex;
         justify-content: center;
@@ -267,6 +393,34 @@ header{
     /* PAGE Project*/
 }
 
+.animcss{
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+    .rond1{
+        width: 50px;
+        height: 50px;
+        border-radius:50px;
+        background-color: #18957D;
+        animation: rond 3s infinite ease-in-out;
+    }
+    .rond2{
+        width: 60px;
+        height: 60px;
+        border-radius:50px;
+        background-color: #18957D;
+        animation: rond 3.25s infinite ease-in-out;
+    }
+    .rond3{
+        width: 50px;
+        height: 50px;
+        border-radius:50px;
+        background-color: #18957D;
+        animation: rond 3.5s infinite ease-in-out;
+    }
+}
 /*MAIN*/
 main{
     /* PAGE > Home > Title .recent_projects */
@@ -293,11 +447,19 @@ main{
         flex-direction: column;
         align-items: center;
         justify-content: center;
+        &::before{
+            content: '';
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            border-radius:150px;
+            background: #f7f0e9;
+            animation: rond 8s infinite ease-in-out;
+            z-index: -10;
+        }
         .title{
             text-align: center;
             h2{
-                background-image: url('Component3.png');
-                font-family: 'Vidaloka';
                 margin: 0;
                 padding: 1rem;
                 border-bottom: #96fbc4 solid 2px;
@@ -314,12 +476,12 @@ main{
         display: flex;
         align-items: center;
         h2{
-            background-image: url('Component3.png');
+            /*background-image: url('Component3.png');*/
             padding: 1rem;
             border-bottom: #96fbc4 solid 2px;
         }
         .text{
-            background-image: url('Component3.png');
+            /*background-image: url('Component3.png');*/
             background-position: right;
             background-repeat: no-repeat;
             display: flex;
@@ -341,6 +503,8 @@ main{
     }
     /* PAGE > Project */
     .content_project{
+        animation: open 3s ease; 
+        background-image: linear-gradient(#f7f0e9,#f7f0e9, white );
         display: flex;
         justify-content: center;
         padding: 10rem;
@@ -351,7 +515,6 @@ main{
         .title_project{
             text-align: right;
             padding-right: 2rem;
-            background-image: url(Component3.png);
             h1{
             animation:  2s ease-out slideL ;
             }
@@ -415,8 +578,10 @@ main{
             align-items: center;
             justify-content: center;
             padding-top: 6rem;
+            animation: open 3s ease;
+            background-image: linear-gradient(#f7f0e9,#f7f0e9, white );
             .title_contact{
-                background-image: url('Component3.png');
+                /*background-image: url('Component3.png');*/
             }
             .hero_contact{
                 display: flex;
@@ -506,6 +671,7 @@ main{
 
 /* FOOTER */
 footer{
+    background-image: linear-gradient(white, #f7f0e9);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -546,13 +712,13 @@ footer{
     header{
         /* PAGE ACCEUIL */
         .hero{
-            padding: 10rem 3rem 0rem 3rem;
+            padding: 10rem 2rem 0rem 2rem;
             display: flex;
             flex-direction: column-reverse;
             align-items: center;
-            background-image: url('back_hero.png');
+            /*background-image: url('back_hero.png');
             background-size: 180%;
-            background-position: top;
+            background-position: top;*/
             .texte{
                 h1{
                     text-align: center;
@@ -635,9 +801,9 @@ footer{
     header{
         .hero{
             padding: 3rem;
-            background-image: url('back_hero.png');
+            /*background-image: url('back_hero.png');
             background-size: 180%;
-            background-position: top;
+            background-position: top;*/
             .animation{
                 padding: 0;
                 .oliv{
@@ -650,6 +816,9 @@ footer{
             justify-content: center;
             align-items: center;  
             text-align: center;
+            h1{
+                line-height: 2.5rem;
+            }
             }
         }
         .nav_portfolio{
