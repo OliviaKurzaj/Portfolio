@@ -1656,10 +1656,9 @@ main .contact {
           animation: open 3s ease;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#f7f0e9), color-stop(#f7f0e9), to(white));
   background-image: linear-gradient(#f7f0e9, #f7f0e9, white);
-}
-
-main .contact .title_contact {
-  /*background-image: url('Component3.png');*/
+  /*.title_contact{
+                background-image: url('Component3.png');
+            }*/
 }
 
 main .contact .hero_contact {
